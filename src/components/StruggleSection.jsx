@@ -6,7 +6,7 @@ import Warning from "../assets/warning.svg";
 
 const StruggleCard = ({ title, description }) => {
   return (
-    <div className="bg-[#F2F2F2] rounded-[17px] border border-gray-200 p-6 w-[527px] h-[90px] flex items-center mb-4">
+    <div className="bg-[#F2F2F2] rounded-[17px] border border-gray-200 p-6 w-[527px] h-[90px] flex items-center mb-4 struggle-card">
       <div className="text-left">
         <h3 className="text-lg font-semibold text-[#04215C]">{title}</h3>
         <p className="text-gray-600 text-sm">{description}</p>
@@ -37,7 +37,7 @@ const StruggleSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="struggle-section" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center mb-16">
           {/* Star indent and Problem & Solution SVG in the same line */}
@@ -70,7 +70,7 @@ const StruggleSection = () => {
           {/* Heading directly below the Problem & Solution SVG */}
           <div className="w-[420px] text-center">
             <h2 
-              className="text-[44px] font-bold text-[#04215C] whitespace-nowrap"
+              className="text-[44px] font-bold text-[#04215C] whitespace-nowrap mobile-text-adjust"
               style={{ 
                 fontFamily: 'Poppins',
                 lineHeight: '53px'
@@ -78,27 +78,24 @@ const StruggleSection = () => {
             >
               The struggle is real
             </h2>
-            <p className="text-gray-600 text-sm mt-3" style={{ fontFamily: 'Inter' }}>
-              Running a practice shouldn’t mean running on fumes
+            <p className="text-gray-600 text-sm mt-3 mobile-subtitle-adjust" style={{ fontFamily: 'Poppins' }}>
+              You're not alone. These challenges plague practices across the country.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-6">
           {/* Left side - Common practice pain points heading and 4 cards */}
-          <div className="w-full md:w-auto mb-10 md:mb-0">
+          <div className="w-full md:w-[550px] flex-shrink-0 mb-10 md:mb-0 struggle-cards">
             {/* Common practice pain points heading with warning icon aligned with cards */}
-            <div className="ml-0 mb-6">
-              <div 
-                className="flex items-center"
-                style={{ marginLeft: '0px', paddingLeft: '0px' }}
-              >
+            <div className="mb-6">
+              <div className="flex items-center">
                 <img 
                   src={Warning} 
                   alt="Warning" 
                   className="w-[32px] h-[32px] mr-3 relative top-[3px]"
                 />
-                <div className="w-[373px] h-[39px]">
+                <div>
                   <h3 
                     className="text-[26px] font-bold"
                     style={{ 
@@ -108,7 +105,7 @@ const StruggleSection = () => {
                       color: '#04215C'
                     }}
                   >
-                    Common practice pain points
+                    Common practice pain points.
                   </h3>
                 </div>
               </div>
@@ -123,12 +120,12 @@ const StruggleSection = () => {
             ))}
           </div>
 
-          {/* Right side - LadyGaga SVG image */}
-          <div className="w-full md:w-auto flex justify-center">
+          {/* Right side - LadyGaga SVG image with matching container size */}
+          <div className="w-full md:w-[550px] flex-shrink-0 flex justify-center items-start h-[460px]">
             <img 
               src={LadyGagaIcon} 
               alt="Dental Practice Challenges" 
-              className="h-[400px] object-contain"
+              className="h-[465px] w-full object-cover rounded-2xl ladygaga-image"
             />
           </div>
         </div>
