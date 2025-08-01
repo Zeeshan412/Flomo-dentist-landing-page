@@ -7,6 +7,7 @@ import SolutionSection from "./components/SolutionSection";
 import FeatureSection from "./components/FeatureSection";
 import DifferentSection from "./components/DifferentSection";
 import AboutUsSection from "./components/AboutUsSection";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <FeatureSection />
       <DifferentSection />
       <AboutUsSection />
+      <Footer />
     </>
   );
 };
