@@ -40,3 +40,41 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Applying global font styles */
+.font-sen {
+  font-family: 'Sen', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom gradient borders */
+.border-gradient-gray {
+  border-image-source: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #666666 50%, rgba(0, 0, 0, 0) 100%);
+  border-image-slice: 1;
+}
+
+.border-gradient-white {
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+}
+
+/* Custom filter classes */
+.filter-blue {
+  filter: invert(32%) sepia(96%) saturate(1352%) hue-rotate(203deg) brightness(97%) contrast(98%);
+}
+
+/* Custom background gradients */
+.bg-blue-gradient {
+  background: linear-gradient(105.22deg, #04215C -0.01%, #144AB7 106.26%);
+}
+
+.bg-blue-white-gradient {
+  background: linear-gradient(95deg, #C8E2FA -5.43%, #FFFFFF 109.37%);
+}

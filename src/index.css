@@ -4,7 +4,6 @@
 
 
 @import "tailwindcss";
-@import "./responsive.css";
 
 body {
     font-family: 'Sen', 'Poppins', 'Inter';

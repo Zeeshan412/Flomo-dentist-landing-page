@@ -1,22 +1,11 @@
 import React from "react";
 
-const FeatureCard = ({ title, description, icon }) => {
+const FeatureCard = ({ title, description }) => {
   return (
-    <div 
-      className="flex items-center p-5 rounded-[17px] border border-[#C4FFD8] bg-[#EFFFF5] feature-card"
-      style={{ 
-        width: '600px',
-        height: '140px'
-      }}
-    >
-      {icon && (
-        <div className="flex-shrink-0 mr-5">
-          {icon}
-        </div>
-      )}
-      <div className="flex-1">
-        <h3 className="text-lg font-semibold text-[#04215C] mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm">{description}</p>
+    <div className="bg-gray-100 rounded-[17px] border border-gray-200 p-4 sm:p-6 w-full h-auto min-h-[70px] sm:min-h-[90px] flex items-center">
+      <div className="text-left">
+        <h3 className="text-base sm:text-lg font-semibold text-blue-900 font-poppins">{title}</h3>
+        <p className="text-gray-600 text-xs sm:text-sm font-poppins">{description}</p>
       </div>
     </div>
   );

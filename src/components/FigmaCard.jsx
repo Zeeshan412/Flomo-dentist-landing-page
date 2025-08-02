@@ -5,70 +5,65 @@ const FigmaCard = ({ title, description, icon, className, customStyle = {}, tran
   // Split title at "br" and create an array of lines
   const titleLines = title ? title.split("br").map(line => line.trim()) : [];
   
-  // Determine text color based on customStyle
-  const textColor = customStyle.color || "inherit";
+  // Convert custom style props to Tailwind classes
+  let cardClasses = `w-full h-full relative rounded-xl sm:rounded-2xl md:rounded-3xl shadow-lg flex p-3 sm:p-4 md:p-6 min-h-[110px] sm:min-h-[120px] md:min-h-[130px]`;
+  
+  // Add background color classes
+  if (!transparentBg) {
+    if (customStyle.backgroundColor === "#072B73") {
+      cardClasses += " bg-blue-900";
+    } else if (customStyle.backgroundColor === "#144AB7") {
+      cardClasses += " bg-blue-700";
+    } else if (customStyle.backgroundColor && customStyle.backgroundColor.includes("linear-gradient")) {
+      cardClasses += " bg-blue-gradient";
+    } else {
+      cardClasses += " bg-white";
+    }
+  }
+  
+  // Add text color classes
+  if (customStyle.color === "#fff" || className?.includes("text-white")) {
+    cardClasses += " text-white";
+  }
+  
+  // Add any additional classes passed as props
+  if (className) {
+    cardClasses += ` ${className}`;
+  }
   
   return (
-    <div
-      className={`feature-card w-full h-full relative rounded-3xl ${!transparentBg ? 'bg-white' : ''} shadow-lg flex p-4 sm:p-5 md:p-6 ${className || ""}`}
-      style={{
-        boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.08)",
-        minHeight: "130px",
-        height: "100%",
-        ...customStyle
-      }}
-    >
+    <div className={cardClasses}>
       {/* Grey Arrow SVG Icon positioned responsively - only shown when hideArrow is false */}
       {!hideArrow && (
         <img
           src={greyarrow}
           alt="Arrow icon"
-          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 absolute rounded-xl opacity-100"
-          style={{
-            bottom: "15px",
-            right: "15px",
-            filter: textColor === "#fff" ? "brightness(0) invert(1)" : "none" // Make arrow white if text is white
-          }}
+          className="absolute top-6 right-6"
         />
       )}
-      
-      {/* Left side - Feature icon */}
+
+      {/* Icon positioned responsively */}
       {icon && (
-        <div className="flex items-center justify-center" style={{ width: "50px", minWidth: "50px" }}>
-          <img
-            src={icon}
-            alt={`${titleLines[0]} icon`}
-            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
-            style={{
-              objectFit: "contain",
-              filter: textColor === "#fff" ? "brightness(0) invert(1)" : "none" // Make icon white if text is white
-            }}
-          />
+        <div className="flex-shrink-0 mr-4">
+          <img src={icon} alt="Feature icon" className="w-10 h-10 md:w-12 md:h-12" />
         </div>
       )}
-      
-      {/* Right side - Title and description */}
-      <div className={`flex-1 flex flex-col justify-center ${icon ? 'pl-4' : ''}`}>
-        {titleLines.length > 0 && (
-          <h3 
-            className="text-base sm:text-lg md:text-xl font-semibold mobile-text-adjust text-left mb-1"
-            style={{ color: textColor }}
-          >
-            {titleLines.map((line, index) => (
-              <React.Fragment key={index}>
-                {index > 0 && <br />}
-                {line}
-              </React.Fragment>
-            ))}
-          </h3>
-        )}
+
+      {/* Content container */}
+      <div className="flex flex-col">
+        {/* Title with line breaks */}
+        <h3 className="font-bold text-lg sm:text-xl md:text-2xl mb-2">
+          {titleLines.map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              {index < titleLines.length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </h3>
+        
+        {/* Description */}
         {description && (
-          <p 
-            className="text-xs sm:text-sm md:text-base mobile-subtitle-adjust"
-            style={{ 
-              color: textColor === "#fff" ? "rgba(255, 255, 255, 0.8)" : "text-gray-600" 
-            }}
-          >
+          <p className="text-sm sm:text-base">
             {description}
           </p>
         )}

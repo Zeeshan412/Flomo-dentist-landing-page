@@ -25,79 +25,48 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section id="solution-section" className="py-16 bg-white">
-      <div className="px-4 relative flex flex-col md:flex-row justify-center items-start gap-12">
-        {/* Left side - BabaYaga SVG with specified measurements */}
-        <div 
-          className="w-full md:w-[551px] flex-shrink-0 flex justify-center items-start"
-          style={{
-            height: '771px'
-          }}
-        >
+    <section id="solution-section" className="py-8 sm:py-12 md:py-16 bg-white">
+      <div className="px-4 relative flex flex-col md:flex-row justify-center items-center md:items-start gap-6 sm:gap-8 md:gap-12">
+        {/* Left side - BabaYaga SVG with responsive sizing */}
+        <div className="w-full sm:w-[90%] md:w-[551px] flex-shrink-0 flex justify-center items-center mb-8 md:mb-0">
           {/* Wrapper div with border radius */}
-          <div 
-            className="rounded-2xl overflow-hidden"
-            style={{
-              width: '551px',
-              height: '771px',
-            }}
-          >
+          <div className="rounded-2xl overflow-hidden w-full h-auto">
             <img 
               src={BabaYaga} 
               alt="Dental practice solution" 
-              className="w-full h-full object-cover babayaga-image"
-              style={{
-                width: '100%',
-                height: '100%',
+              className="w-full h-auto object-contain sm:object-cover rounded-2xl"
+              style={{ 
+                height: "634px",
+                borderRadius: "1rem" /* This applies the rounded-2xl equivalent */
               }}
             />
           </div>
         </div>
 
         {/* Right side - Solution text content with FeatureCards */}
-        <div 
-          className="w-full md:w-[633px] flex-shrink-0 rounded-[20px] p-8 feature-cards-container"
-          style={{
-            height: '771px',
-            position: 'relative',
-            border: 'none' // Making the border invisible
-          }}
-        >
+        <div className="w-full sm:w-[90%] md:w-[633px] flex-shrink-0 rounded-[20px] p-4 sm:p-6 md:p-8">
           <div className="h-full flex flex-col">
             <div>
               {/* New heading with tick icon */}
-              <div className="flex items-center mb-6 relative">
-                <div 
-                  style={{ 
-                    position: 'relative',
-                    width: '32px',
-                    height: '32px',
-                    marginRight: '10px'
-                  }}
-                >
+              <div className="flex items-center mb-4 sm:mb-6 relative">
+                <div className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] mr-2 sm:mr-3 md:mr-4 shrink-0">
                   <img 
                     src={Tick} 
                     alt="Tick" 
                     className="w-full h-full"
                   />
                 </div>
-                <p 
-                  className="text-[#1E1E2F] font-semibold mobile-text-adjust"
-                  style={{ 
-                    fontFamily: 'Poppins',
-                    fontSize: '26px'
-                  }}
-                >
+                <p className="text-gray-900 font-semibold text-xl sm:text-2xl md:text-[26px] font-poppins">
                   Here's how Flomo has your back
                 </p>
               </div>
 
-              <p className="text-gray-700 mb-8 mobile-subtitle-adjust" style={{ fontFamily: 'Poppins' }}>
+              <p className="text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base font-poppins">
                 Your dental team's knowledge hub that puts your expertise at everyone's fingertips.
               </p>
               
               {/* Feature cards without numbering icons */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {features.map((feature, index) => (
                   <FeatureCard 
                     key={index}
