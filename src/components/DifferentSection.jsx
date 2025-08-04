@@ -1,31 +1,19 @@
 import React from "react";
 import FigmaCard from "./FigmaCard";
 import { bolt, hiipa2, heart, teeth, liine } from "../assets";
+import differentData from "../data/differentData.json";
 
 const DifferentSection = () => {
-  // Sample data for the cards based on the Figma design with their respective icons
-  const cardData = [
-    {
-      title: "Built by Dentists, for Dentists",
-      description: "We've lived the chaos of running a practice. Flomo isn't just another SaaS tool—it's designed by people who actually understand what it's like to lead a dental team through staffing gaps, rapid growth, and daily unpredictability.",
-      icon: teeth
-    },
-    {
-      title: "HIPAA First, Always",
-      description: "Your patient data isn't an afterthought—it's sacred. Flomo is built with HIPAA compliance at its core, so you can trust your systems are protected from day one.Security and compliance aren't afterthoughts - they're built into every feature from day.",
-      icon: hiipa2
-    },
-    {
-      title: "We Send Help, Not Just Software",
-      description: "You don't need more tech headaches. We provide a dedicated onboarding specialist or virtual assistant (optional add-on) to help you build your SOPs and get your team up and running fast.Get dedicated support from our team of dental workow",
-      icon: heart
-    },
-    {
-      title: "Quick-Swap Technology",
-      description: "Things change fast in a growing practice. Our unique Search & Replace tool lets you update anesthetics, policies or former employee names in one spot—and instantly apply those changes across your entire system.",
-      icon: bolt
-    }
-  ];
+  // Get card data from JSON file
+  const { title, cards } = differentData.differentSection;
+  
+  // Map of icon string names to their imported components
+  const iconMap = {
+    teeth: teeth,
+    hiipa2: hiipa2,
+    heart: heart,
+    bolt: bolt
+  };
 
   return (
     <section 
@@ -43,7 +31,7 @@ const DifferentSection = () => {
         {/* Section heading */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-32">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 font-sen">
-            Why Choose Flomo?
+            {title}
           </h2>
           
           {/* Line below the heading using liine.svg */}
@@ -80,15 +68,15 @@ const DifferentSection = () => {
         
         {/* Grid of FigmaCards with responsive layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 gap-y-6 sm:gap-y-8 md:gap-y-12 lg:gap-y-16 max-w-7xl mx-auto mt-4 sm:mt-8 md:mt-16">
-          {cardData.map((card, index) => (
-            <div key={index} className="relative flex justify-center">
+          {cards.map((card) => (
+            <div key={card.id} className="relative flex justify-center">
               <div 
                 className="w-full h-auto min-h-[160px] sm:min-h-[170px] md:min-h-[180px] lg:min-h-[212px] max-w-[450px] md:max-w-[550px] lg:max-w-[626px] relative rounded-[15px] sm:rounded-[20px] md:rounded-[30px]"
               >
                 <FigmaCard 
                   title={card.title}
                   description={card.description}
-                  icon={card.icon}
+                  icon={iconMap[card.icon]}
                   transparentBg={true}
                   hideArrow={true}
                   className="rounded-[15px] sm:rounded-[20px] md:rounded-[30px] p-[15px] sm:p-[20px] md:p-[30px] backdrop-blur bg-white/15 border border-white/30 text-white"

@@ -1,7 +1,10 @@
 import React from "react";
 import { doctors, doctor1, doctor2, liine, blueArrow } from "../assets";
+import aboutData from "../data/aboutData.json";
 
 const AboutUsSection = () => {
+  const { mainParagraphs, founders } = aboutData.aboutUs;
+  
   return (
     <>
       {/* About Us Section */}
@@ -48,18 +51,14 @@ const AboutUsSection = () => {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 sm:gap-6 md:gap-8 lg:gap-12 overflow-hidden">
             {/* Left side content */}
             <div className="w-full md:w-1/2 flex flex-col">
-              
-              <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
-                <strong>Dr. Jeff Greenberg</strong> and <strong>Dr. Eric Block</strong> are full-time practicing dentists and owners of dental offices in Massachusetts. Although they originally met years ago, it wasn't until reconnecting at a dental conference in 2022 that they realized how much they had in common—not just as clinicians, but as business owners navigating the same daily frustrations.
-              
-                As dentists, they found themselves having the same conversations over and over: the stress of onboarding new team members, the inefficiencies of repeating instructions, and the frustration of not having clearly documented systems in place.
-              
-                Like many dentists, they knew the clinical side—but running the business side smoothly was another story.
-              </p>
-              
-              <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
-                What they both discovered was simple: when everything is documented in one centralized location that's easy for the whole team to access, the practice runs better. It becomes more efficient, more productive, and—most importantly—less stressful for everyone, not just the dentist. That's why they created Flomo—a name born from combining FOMO (the fear of missing out on something amazing) with workflow. Flomo helps dental offices do something once, document it, and then reference it anytime it's needed. Whether it's how you want your operatory set up for a specific clinical procedure, how to handle a billing call, or even how to fix a piece of equipment, Flomo ensures your systems are no longer stuck in someone's head or lost in a binder no one opens. Flomo was built by dentists, for dental teams—because running a practice should be just as smooth as providing excellent care.
-              </p>
+              {/* Map through paragraphs from JSON with dangerouslySetInnerHTML to render HTML tags */}
+              {mainParagraphs.map((paragraph, index) => (
+                <p 
+                  key={index} 
+                  className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base"
+                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                />
+              ))}
             </div>
             
             {/* Right side image */}
@@ -119,35 +118,27 @@ const AboutUsSection = () => {
           
           {/* Founders Container */}
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-xs sm:max-w-md md:max-w-5xl mx-auto">
-            {/* Founder 1 */}
-            <div className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl rounded-b-xl">
-              <div className="h-[200px] sm:h-[220px] md:h-[250px] lg:h-[300px] overflow-hidden">
-                <img 
-                  src={doctor2} 
-                  alt="Doctor 2" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-3 sm:p-4 md:p-5">
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-blue-900 mb-1 sm:mb-2">Dr. Jeffrey E. Greenberg</h3>
-                <p className="text-gray-600 mb-2 sm:mb-3 text-sm sm:text-base">Co-Founder and Chief Vision Officer</p>
-              </div>
-            </div>
-            
-            {/* Founder 2 */}
-            <div className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl rounded-b-xl">
-              <div className="h-[200px] sm:h-[220px] md:h-[250px] lg:h-[300px] overflow-hidden">
-                <img 
-                  src={doctor1} 
-                  alt="Doctor 1" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-3 sm:p-4 md:p-5">
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-blue-900 mb-1 sm:mb-2">Dr. Eric Block</h3>
-                <p className="text-gray-600 mb-2 sm:mb-3 text-sm sm:text-base">Co-Founder and Chief Networking Officer</p>
-              </div>
-            </div>
+            {/* Map through founders from JSON */}
+            {founders.map((founder) => {
+              // Dynamically select the image based on the image property in JSON
+              const founderImage = founder.image === "doctor1" ? doctor1 : doctor2;
+              
+              return (
+                <div key={founder.id} className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl rounded-b-xl">
+                  <div className="h-[200px] sm:h-[220px] md:h-[250px] lg:h-[300px] overflow-hidden">
+                    <img 
+                      src={founderImage} 
+                      alt={founder.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-3 sm:p-4 md:p-5">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-blue-900 mb-1 sm:mb-2">{founder.name}</h3>
+                    <p className="text-gray-600 mb-2 sm:mb-3 text-sm sm:text-base">{founder.title}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

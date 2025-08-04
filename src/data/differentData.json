@@ -1,0 +1,31 @@
+{
+  "differentSection": {
+    "title": "Why Choose Flomo?",
+    "cards": [
+      {
+        "id": 1,
+        "title": "Built by Dentists, for Dentists",
+        "description": "We've lived the chaos of running a practice. Flomo isn't just another SaaS tool—it's designed by people who actually understand what it's like to lead a dental team through staffing gaps, rapid growth, and daily unpredictability.",
+        "icon": "teeth"
+      },
+      {
+        "id": 2,
+        "title": "HIPAA First, Always",
+        "description": "Your patient data isn't an afterthought—it's sacred. Flomo is built with HIPAA compliance at its core, so you can trust your systems are protected from day one. Security and compliance aren't afterthoughts - they're built into every feature from day one.",
+        "icon": "hiipa2"
+      },
+      {
+        "id": 3,
+        "title": "We Send Help, Not Just Software",
+        "description": "You don't need more tech headaches. We provide a dedicated onboarding specialist or virtual assistant (optional add-on) to help you build your SOPs and get your team up and running fast. Get dedicated support from our team of dental workflow experts.",
+        "icon": "heart"
+      },
+      {
+        "id": 4,
+        "title": "Quick-Swap Technology",
+        "description": "Things change fast in a growing practice. Our unique Search & Replace tool lets you update anesthetics, policies or former employee names in one spot—and instantly apply those changes across your entire system.",
+        "icon": "bolt"
+      }
+    ]
+  }
+}

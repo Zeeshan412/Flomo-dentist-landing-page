@@ -1,0 +1,22 @@
+{
+  "aboutUs": {
+    "mainParagraphs": [
+      "<strong>Dr. Jeff Greenberg</strong> and <strong>Dr. Eric Block</strong> are full-time practicing dentists and owners of dental offices in Massachusetts. Although they originally met years ago, it wasn't until reconnecting at a dental conference in 2022 that they realized how much they had in common—not just as clinicians, but as business owners navigating the same daily frustrations. As dentists, they found themselves having the same conversations over and over: the stress of onboarding new team members, the inefficiencies of repeating instructions, and the frustration of not having clearly documented systems in place. Like many dentists, they knew the clinical side—but running the business side smoothly was another story.",
+      "What they both discovered was simple: when everything is documented in one centralized location that's easy for the whole team to access, the practice runs better. It becomes more efficient, more productive, and—most importantly—less stressful for everyone, not just the dentist. That's why they created Flomo—a name born from combining FOMO (the fear of missing out on something amazing) with workflow. Flomo helps dental offices do something once, document it, and then reference it anytime it's needed. Whether it's how you want your operatory set up for a specific clinical procedure, how to handle a billing call, or even how to fix a piece of equipment, Flomo ensures your systems are no longer stuck in someone's head or lost in a binder no one opens. Flomo was built by dentists, for dental teams—because running a practice should be just as smooth as providing excellent care."
+    ],
+    "founders": [
+      {
+        "id": 1,
+        "name": "Dr. Jeffrey E. Greenberg",
+        "title": "Co-Founder and Chief Vision Officer",
+        "image": "doctor2"
+      },
+      {
+        "id": 2,
+        "name": "Dr. Eric Block",
+        "title": "Co-Founder and Chief Networking Officer",
+        "image": "doctor1"
+      }
+    ]
+  }
+}
