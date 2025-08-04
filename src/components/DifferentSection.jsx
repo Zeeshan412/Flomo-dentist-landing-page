@@ -17,8 +17,7 @@ const DifferentSection = () => {
 
   return (
     <section
-      className="w-full relative py-8 sm:py-12 md:py-16 lg:py-24 min-h-auto md:min-h-[600px] lg:min-h-[794px]"
-      style={{ background: "linear-gradient(105.22deg, #04215C -0.01%, #144AB7 106.26%)" }}
+      className="w-full relative py-8 sm:py-12 md:py-16 lg:py-24 min-h-auto md:min-h-[600px] lg:min-h-[794px] bg-gradient-to-br from-[#04215C] to-[#144AB7]"
     >
       <div className="container mx-auto px-4 relative">
         {/* Star decoration elements */}
@@ -47,12 +46,8 @@ const DifferentSection = () => {
               <img
                 src={liine}
                 alt="Decorative line"
-                className="w-full h-auto"
+                className="w-full h-auto invert-[0.5] hue-rotate-[164deg] contrast-90 opacity-100 border border-solid"
                 style={{
-                  filter:
-                    "brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(164deg) brightness(90%) contrast(90%)",
-                  opacity: 1,
-                  border: "1px solid",
                   borderImageSource:
                     "linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, #666666 50%, rgba(102, 102, 102, 0) 100%)",
                 }}
@@ -63,12 +58,8 @@ const DifferentSection = () => {
               <img
                 src={liine}
                 alt="Decorative line"
-                className="w-full h-auto"
+                className="w-full h-auto invert-[0.5] hue-rotate-[164deg] contrast-90 opacity-100 border border-solid"
                 style={{
-                  filter:
-                    "brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(164deg) brightness(90%) contrast(90%)",
-                  opacity: 1,
-                  border: "1px solid",
                   borderImageSource:
                     "linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, #666666 50%, rgba(102, 102, 102, 0) 100%)",
                 }}

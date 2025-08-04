@@ -46,7 +46,7 @@ const StruggleSection = () => {
               alt="Star"
               className="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] mr-2 filter-blue"
             />
-            <div className="w-[150px] sm:w-[197px] h-[18px] sm:h-[21px] text-center font-poppins font-medium text-xs sm:text-sm leading-[18px] sm:leading-[21px] tracking-[2.8px] uppercase">
+            <div className="w-[150px] h-[18px] sm:w-[197px] sm:h-[21px] text-center font-poppins font-medium text-xs sm:text-sm leading-[18px] sm:leading-[21px] tracking-[2.8px] uppercase">
               <img
                 src={problemSolution}
                 alt="Problem & Solution"
@@ -75,7 +75,7 @@ const StruggleSection = () => {
                 <img
                   src={warning}
                   alt="Warning"
-                  className="w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] mr-2 sm:mr-3 relative top-[2px] sm:top-[3px]"
+                  className="w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] relative top-[2px] sm:top-[3px] mr-2 sm:mr-3"
                 />
                 <div>
                   <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-bold font-sen leading-[140%] text-blue-900">
@@ -94,19 +94,12 @@ const StruggleSection = () => {
 
           {/* Right side - LadyGaga SVG image with matching container size */}
           <div
-            className="w-full sm:w-[90%] md:w-[550px] flex-shrink-0 flex justify-center items-start"
-            style={{ height: "auto", minHeight: "580px" }}
+            className="w-full sm:w-[90%] md:w-[550px] flex-shrink-0 flex justify-center items-start min-h-[580px]"
           >
             <img
               src={ladygaga}
               alt="Dental Practice Challenges"
-              className="w-full h-auto max-w-full sm:max-w-[450px] md:max-w-full rounded-2xl"
-              style={{
-                minHeight: "540px",
-                height: "540px",
-                objectFit: "cover",
-                objectPosition: "top",
-              }}
+              className="w-full max-w-full sm:max-w-[450px] md:max-w-full rounded-2xl min-h-[540px] object-cover object-top"
             />
           </div>
         </div>

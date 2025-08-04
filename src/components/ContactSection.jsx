@@ -4,8 +4,7 @@ import { blueArrow } from "../assets";
 const ContactSection = () => {
   return (
     <section
-      className="w-full py-8 sm:py-12 md:py-16 lg:py-20 flex items-center justify-center h-auto min-h-[250px] md:min-h-[359px]"
-      style={{ background: "linear-gradient(105.22deg, #04215C -0.01%, #144AB7 106.26%)" }}
+      className="w-full py-8 sm:py-12 md:py-16 lg:py-20 flex items-center justify-center h-auto min-h-[250px] md:min-h-[359px] bg-gradient-to-br from-[#04215C] to-[#144AB7]"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center">

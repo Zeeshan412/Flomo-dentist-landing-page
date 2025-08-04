@@ -19,12 +19,8 @@ const FoundersSection = () => {
               <img
                 src={liine}
                 alt="Decorative line"
-                className="w-full h-auto"
+                className="w-full h-auto invert-[0.5] hue-rotate-[164deg] contrast-90 opacity-100 border border-solid"
                 style={{
-                  filter:
-                    "brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(164deg) brightness(90%) contrast(90%)",
-                  opacity: 1,
-                  border: "1px solid",
                   borderImageSource:
                     "linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, #666666 50%, rgba(102, 102, 102, 0) 100%)",
                 }}
@@ -35,12 +31,8 @@ const FoundersSection = () => {
               <img
                 src={liine}
                 alt="Decorative line"
-                className="w-full h-auto"
+                className="w-full h-auto invert-[0.5] hue-rotate-[164deg] contrast-90 opacity-100 border border-solid"
                 style={{
-                  filter:
-                    "brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(164deg) brightness(90%) contrast(90%)",
-                  opacity: 1,
-                  border: "1px solid",
                   borderImageSource:
                     "linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, #666666 50%, rgba(102, 102, 102, 0) 100%)",
                 }}
@@ -72,7 +64,9 @@ const FoundersSection = () => {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-blue-900 mb-1 sm:mb-2">
                     {founder.name}
                   </h3>
-                  <p className="text-gray-600 mb-2 sm:mb-3 text-sm sm:text-base">{founder.title}</p>
+                  <p className="text-gray-600 mb-2 sm:mb-3 text-sm sm:text-base">
+                    {founder.title}
+                  </p>
                 </div>
               </div>
             );
