@@ -26,7 +26,8 @@ const Hero = () => {
             <span className="text-[#96BFFF]">Thrive</span> With Less <br /> Stress
           </h1>
           <p className="text-[16px] md:text-[18px] leading-relaxed max-w-[500px] mx-auto lg:mx-0">
-            Tired of the daily chaos?<br/> Flomo helps you share your knowledge, save time, and boost team efficiency.
+            Tired of the daily chaos?
+            <br /> Flomo helps you share your knowledge, save time, and boost team efficiency.
           </p>
           <div className="mt-12">
             <Cbutton />

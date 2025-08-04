@@ -9,11 +9,7 @@ const Button = ({ text = "Contact Us" }) => {
     >
       <span>{text}</span>
       <span className="w-6 h-6 sm:w-8 sm:h-8 bg-[#072B73] rounded-full flex items-center justify-center shrink-0">
-        <img
-          src={carrow}
-          alt="arrow"
-          className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
-        />
+        <img src={carrow} alt="arrow" className="w-4 h-4 sm:w-6 sm:h-6 object-contain" />
       </span>
     </button>
   );

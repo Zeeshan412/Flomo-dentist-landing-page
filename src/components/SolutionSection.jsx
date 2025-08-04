@@ -7,20 +7,23 @@ const SolutionSection = () => {
   const features = [
     {
       title: "Centralize your knowledge",
-      description: "Create a single source of truth for all practice protocols, procedures, and patient information."
+      description:
+        "Create a single source of truth for all practice protocols, procedures, and patient information.",
     },
     {
       title: "Streamline communication",
-      description: "Ensure everyone knows exactly what to do and how to do it, reducing confusion and errors."
+      description:
+        "Ensure everyone knows exactly what to do and how to do it, reducing confusion and errors.",
     },
     {
       title: "Accelerate training",
-      description: "Get new team members up to speed faster with immediate access to all practice knowledge."
+      description:
+        "Get new team members up to speed faster with immediate access to all practice knowledge.",
     },
     {
       title: "Improve patient experience",
-      description: "Deliver consistent, high-quality care that builds patient trust and loyalty."
-    }
+      description: "Deliver consistent, high-quality care that builds patient trust and loyalty.",
+    },
   ];
 
   return (
@@ -30,13 +33,13 @@ const SolutionSection = () => {
         <div className="w-full sm:w-[90%] md:w-[551px] flex-shrink-0 flex justify-center items-center mb-8 md:mb-0">
           {/* Wrapper div with border radius */}
           <div className="rounded-2xl overflow-hidden w-full h-auto">
-            <img 
-              src={babayaga} 
-              alt="Dental practice solution" 
+            <img
+              src={babayaga}
+              alt="Dental practice solution"
               className="w-full h-auto object-contain sm:object-cover rounded-2xl"
-              style={{ 
+              style={{
                 height: "634px",
-                borderRadius: "1rem" /* This applies the rounded-2xl equivalent */
+                borderRadius: "1rem" /* This applies the rounded-2xl equivalent */,
               }}
             />
           </div>
@@ -49,11 +52,7 @@ const SolutionSection = () => {
               {/* New heading with tick icon */}
               <div className="flex items-center mb-4 sm:mb-6 relative">
                 <div className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] mr-2 sm:mr-3 md:mr-4 shrink-0">
-                  <img 
-                    src={tick} 
-                    alt="Tick" 
-                    className="w-full h-full"
-                  />
+                  <img src={tick} alt="Tick" className="w-full h-full" />
                 </div>
                 <p className="text-gray-900 font-semibold text-xl sm:text-2xl md:text-[26px] font-poppins">
                   Here's how Flomo has your back
@@ -63,11 +62,11 @@ const SolutionSection = () => {
               <p className="text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base font-poppins">
                 Your dental team's knowledge hub that puts your expertise at everyone's fingertips.
               </p>
-              
+
               {/* Feature cards without numbering icons */}
               <div className="space-y-3 sm:space-y-4">
                 {features.map((feature, index) => (
-                  <FeatureCard 
+                  <FeatureCard
                     key={index}
                     title={feature.title}
                     description={feature.description}

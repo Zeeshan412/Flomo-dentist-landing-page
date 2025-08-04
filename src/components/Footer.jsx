@@ -17,9 +17,21 @@ const Footer = () => {
             <div className="mb-6 sm:mb-0 text-center sm:text-left">
               <h3 className="text-lg font-bold mb-3 md:mb-4 text-blue-900">Quick Links</h3>
               <ul className="space-y-1 sm:space-y-2">
-                <li><a href="#" className="text-blue-900 hover:text-blue-700 text-sm sm:text-base">Home</a></li>
-                <li><a href="#" className="text-blue-900 hover:text-blue-700 text-sm sm:text-base">About Us</a></li>
-                <li><a href="#" className="text-blue-900 hover:text-blue-700 text-sm sm:text-base">Features</a></li>
+                <li>
+                  <a href="#" className="text-blue-900 hover:text-blue-700 text-sm sm:text-base">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-blue-900 hover:text-blue-700 text-sm sm:text-base">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-blue-900 hover:text-blue-700 text-sm sm:text-base">
+                    Features
+                  </a>
+                </li>
               </ul>
             </div>
 

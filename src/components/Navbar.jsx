@@ -29,15 +29,21 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button 
-            onClick={toggleMenu} 
+          <button
+            onClick={toggleMenu}
             className="text-[#072B73] focus:outline-none"
             aria-label="Toggle mobile menu"
           >
             {/* Hamburger Icon */}
-            <div className={`w-6 h-0.5 bg-[#072B73] transition-all duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-1.5' : ''}`}></div>
-            <div className={`w-6 h-0.5 bg-[#072B73] my-1.5 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
-            <div className={`w-6 h-0.5 bg-[#072B73] transition-all duration-300 ${isMenuOpen ? 'transform -rotate-45 -translate-y-1.5' : ''}`}></div>
+            <div
+              className={`w-6 h-0.5 bg-[#072B73] transition-all duration-300 ${isMenuOpen ? "transform rotate-45 translate-y-1.5" : ""}`}
+            ></div>
+            <div
+              className={`w-6 h-0.5 bg-[#072B73] my-1.5 transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`}
+            ></div>
+            <div
+              className={`w-6 h-0.5 bg-[#072B73] transition-all duration-300 ${isMenuOpen ? "transform -rotate-45 -translate-y-1.5" : ""}`}
+            ></div>
           </button>
         </div>
       </nav>
@@ -47,7 +53,9 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-lg absolute top-[99px] left-0 w-full py-4 z-50 transition-all duration-300 ease-in-out">
           <div className="flex flex-col items-center gap-4 text-[#072B73] font-medium">
             <span className="hover:text-blue-600 cursor-pointer transition-colors py-2">Home</span>
-            <span className="hover:text-blue-600 cursor-pointer transition-colors py-2">About Us</span>
+            <span className="hover:text-blue-600 cursor-pointer transition-colors py-2">
+              About Us
+            </span>
             <span className="hover:text-blue-600 cursor-pointer transition-colors py-2">Login</span>
             <div className="mt-2 mb-2">
               <Button />

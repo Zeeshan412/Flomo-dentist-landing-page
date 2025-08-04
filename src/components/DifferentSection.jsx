@@ -6,74 +6,83 @@ import differentData from "../data/differentData.json";
 const DifferentSection = () => {
   // Get card data from JSON file
   const { title, cards } = differentData.differentSection;
-  
+
   // Map of icon string names to their imported components
   const iconMap = {
     teeth: teeth,
     hiipa2: hiipa2,
     heart: heart,
-    bolt: bolt
+    bolt: bolt,
   };
 
   return (
-    <section 
+    <section
       className="w-full relative py-8 sm:py-12 md:py-16 lg:py-24 min-h-auto md:min-h-[600px] lg:min-h-[794px]"
       style={{ background: "linear-gradient(105.22deg, #04215C -0.01%, #144AB7 106.26%)" }}
     >
       <div className="container mx-auto px-4 relative">
         {/* Star decoration elements */}
         <div className="absolute top-10 sm:top-16 md:top-20 left-4 sm:left-8 md:left-10 opacity-30 hidden md:block">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" className="sm:w-50 sm:h-50 md:w-60 md:h-60">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+            className="sm:w-50 sm:h-50 md:w-60 md:h-60"
+          >
             <path d="M12 0L15.09 8.91L24 12L15.09 15.09L12 24L8.91 15.09L0 12L8.91 8.91L12 0Z" />
           </svg>
         </div>
-        
+
         {/* Section heading */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-32">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 font-sen">
             {title}
           </h2>
-          
+
           {/* Line below the heading using liine.svg */}
           <div className="flex justify-center mb-4 sm:mb-6 md:mb-8 relative">
             <div className="hidden md:block w-[866px] max-w-full mx-auto relative">
-              <img 
-                src={liine} 
-                alt="Decorative line" 
+              <img
+                src={liine}
+                alt="Decorative line"
                 className="w-full h-auto"
                 style={{
-                  filter: "brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(164deg) brightness(90%) contrast(90%)",
+                  filter:
+                    "brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(164deg) brightness(90%) contrast(90%)",
                   opacity: 1,
                   border: "1px solid",
-                  borderImageSource: "linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, #666666 50%, rgba(102, 102, 102, 0) 100%)"
+                  borderImageSource:
+                    "linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, #666666 50%, rgba(102, 102, 102, 0) 100%)",
                 }}
               />
             </div>
             {/* Mobile version of line with shorter width */}
             <div className="md:hidden block w-[250px] max-w-[80%] mx-auto relative">
-              <img 
-                src={liine} 
-                alt="Decorative line" 
+              <img
+                src={liine}
+                alt="Decorative line"
                 className="w-full h-auto"
                 style={{
-                  filter: "brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(164deg) brightness(90%) contrast(90%)",
+                  filter:
+                    "brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(164deg) brightness(90%) contrast(90%)",
                   opacity: 1,
                   border: "1px solid",
-                  borderImageSource: "linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, #666666 50%, rgba(102, 102, 102, 0) 100%)"
+                  borderImageSource:
+                    "linear-gradient(90deg, rgba(102, 102, 102, 0) 0%, #666666 50%, rgba(102, 102, 102, 0) 100%)",
                 }}
               />
             </div>
           </div>
         </div>
-        
+
         {/* Grid of FigmaCards with responsive layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 gap-y-6 sm:gap-y-8 md:gap-y-12 lg:gap-y-16 max-w-7xl mx-auto mt-4 sm:mt-8 md:mt-16">
           {cards.map((card) => (
             <div key={card.id} className="relative flex justify-center">
-              <div 
-                className="w-full h-auto min-h-[160px] sm:min-h-[170px] md:min-h-[180px] lg:min-h-[212px] max-w-[450px] md:max-w-[550px] lg:max-w-[626px] relative rounded-[15px] sm:rounded-[20px] md:rounded-[30px]"
-              >
-                <FigmaCard 
+              <div className="w-full h-auto min-h-[160px] sm:min-h-[170px] md:min-h-[180px] lg:min-h-[212px] max-w-[450px] md:max-w-[550px] lg:max-w-[626px] relative rounded-[15px] sm:rounded-[20px] md:rounded-[30px]">
+                <FigmaCard
                   title={card.title}
                   description={card.description}
                   icon={iconMap[card.icon]}

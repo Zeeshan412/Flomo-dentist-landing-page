@@ -3,7 +3,6 @@ import React from "react";
 import Button from "./Button";
 import { card } from "../assets";
 
-
 const Card = ({ SvgIcon, title, description }) => {
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 text-center max-w-xs w-full">
