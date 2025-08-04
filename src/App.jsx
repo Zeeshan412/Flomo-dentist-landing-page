@@ -6,7 +6,9 @@ import StruggleSection from "./components/StruggleSection";
 import SolutionSection from "./components/SolutionSection";
 import FeatureSection from "./components/FeatureSection";
 import DifferentSection from "./components/DifferentSection";
-import AboutUsSection from "./components/AboutUsSection";
+import AboutMainSection from "./components/AboutMainSection";
+import FoundersSection from "./components/FoundersSection";
+import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -18,7 +20,9 @@ const App = () => {
       <SolutionSection />
       <FeatureSection />
       <DifferentSection />
-      <AboutUsSection />
+      <AboutMainSection />
+      <FoundersSection />
+      <ContactSection />
       <Footer />
     </>
   );
