@@ -3,7 +3,7 @@ import Herolaptop from "../assets/Herolaptop.svg";
 import Star from "../assets/star.svg";
 import Shadow from "../assets/shadow.svg";
 import LaptopBg from "../assets/laptop bg.svg";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/Logo.svg";
 import Cbutton from "./Cbutton";
 import Star2 from "../assets/star.svg";
 
