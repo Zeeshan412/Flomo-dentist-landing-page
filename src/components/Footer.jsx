@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/Logo.svg";
+import { logo } from "../assets";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row mb-6 sm:mb-8 md:mb-12">
           {/* Logo only - on the left */}
           <div className="mb-6 sm:mb-8 md:mb-0 max-w-[200px] mx-auto md:mx-0">
-            <img src={Logo} alt="Flomo Logo" className="h-8 sm:h-10 mb-4 sm:mb-6 mx-auto md:mx-0" />
+            <img src={logo} alt="Flomo Logo" className="h-8 sm:h-10 mb-4 sm:mb-6 mx-auto md:mx-0" />
           </div>
 
           {/* Centered headings with Contact Us pushed right */}

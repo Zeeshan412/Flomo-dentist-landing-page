@@ -1,5 +1,5 @@
 import React from "react";
-import carrow from "../assets/carrow.svg";
+import { carrow } from "../assets";
 
 const Button = ({ text = "Contact Us" }) => {
   return (

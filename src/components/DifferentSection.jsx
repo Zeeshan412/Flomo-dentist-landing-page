@@ -1,10 +1,6 @@
 import React from "react";
 import FigmaCard from "./FigmaCard";
-import boltIcon from "../assets/bolt.svg";
-import hiipa2Icon from "../assets/hiipa 2.svg";
-import heartIcon from "../assets/heart.svg";
-import teethIcon from "../assets/teeth.svg";
-import liineImg from "../assets/liine.svg";
+import { bolt, hiipa2, heart, teeth, liine } from "../assets";
 
 const DifferentSection = () => {
   // Sample data for the cards based on the Figma design with their respective icons
@@ -12,22 +8,22 @@ const DifferentSection = () => {
     {
       title: "Built by Dentists, for Dentists",
       description: "We've lived the chaos of running a practice. Flomo isn't just another SaaS tool—it's designed by people who actually understand what it's like to lead a dental team through staffing gaps, rapid growth, and daily unpredictability.",
-      icon: teethIcon
+      icon: teeth
     },
     {
       title: "HIPAA First, Always",
       description: "Your patient data isn't an afterthought—it's sacred. Flomo is built with HIPAA compliance at its core, so you can trust your systems are protected from day one.Security and compliance aren't afterthoughts - they're built into every feature from day.",
-      icon: hiipa2Icon
+      icon: hiipa2
     },
     {
       title: "We Send Help, Not Just Software",
       description: "You don't need more tech headaches. We provide a dedicated onboarding specialist or virtual assistant (optional add-on) to help you build your SOPs and get your team up and running fast.Get dedicated support from our team of dental workow",
-      icon: heartIcon
+      icon: heart
     },
     {
       title: "Quick-Swap Technology",
       description: "Things change fast in a growing practice. Our unique Search & Replace tool lets you update anesthetics, policies or former employee names in one spot—and instantly apply those changes across your entire system.",
-      icon: boltIcon
+      icon: bolt
     }
   ];
 
@@ -54,7 +50,7 @@ const DifferentSection = () => {
           <div className="flex justify-center mb-4 sm:mb-6 md:mb-8 relative">
             <div className="hidden md:block w-[866px] max-w-full mx-auto relative">
               <img 
-                src={liineImg} 
+                src={liine} 
                 alt="Decorative line" 
                 className="w-full h-auto"
                 style={{
@@ -68,7 +64,7 @@ const DifferentSection = () => {
             {/* Mobile version of line with shorter width */}
             <div className="md:hidden block w-[250px] max-w-[80%] mx-auto relative">
               <img 
-                src={liineImg} 
+                src={liine} 
                 alt="Decorative line" 
                 className="w-full h-auto"
                 style={{

@@ -1,8 +1,5 @@
 import React from "react";
-import LadyGagaIcon from "../assets/ladygaga.svg";
-import ProblemSolutionIcon from "../assets/Problem & Solution.svg";
-import Star from "../assets/star.svg";
-import Warning from "../assets/warning.svg";
+import { ladygaga, problemSolution, star, warning } from "../assets";
 
 const StruggleCard = ({ title, description }) => {
   return (
@@ -43,7 +40,7 @@ const StruggleSection = () => {
           {/* Star indent and Problem & Solution SVG in the same line */}
           <div className="flex items-center justify-center mb-3 sm:mb-4">
             <img 
-              src={Star} 
+              src={star} 
               alt="Star" 
               className="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] mr-2 filter-blue"
             />
@@ -51,7 +48,7 @@ const StruggleSection = () => {
               className="w-[150px] sm:w-[197px] h-[18px] sm:h-[21px] text-center font-poppins font-medium text-xs sm:text-sm leading-[18px] sm:leading-[21px] tracking-[2.8px] uppercase"
             >
               <img 
-                src={ProblemSolutionIcon} 
+                src={problemSolution} 
                 alt="Problem & Solution" 
                 className="w-full h-full object-contain"
               />
@@ -78,7 +75,7 @@ const StruggleSection = () => {
             <div className="mb-4 sm:mb-6 w-full sm:w-[80%] md:w-auto">
               <div className="flex items-center">
                 <img 
-                  src={Warning} 
+                  src={warning} 
                   alt="Warning" 
                   className="w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] mr-2 sm:mr-3 relative top-[2px] sm:top-[3px]"
                 />
@@ -106,7 +103,7 @@ const StruggleSection = () => {
           {/* Right side - LadyGaga SVG image with matching container size */}
           <div className="w-full sm:w-[90%] md:w-[550px] flex-shrink-0 flex justify-center items-start" style={{ height: "auto", minHeight: "580px" }}>
             <img 
-              src={LadyGagaIcon} 
+              src={ladygaga} 
               alt="Dental Practice Challenges" 
               className="w-full h-auto max-w-full sm:max-w-[450px] md:max-w-full rounded-2xl"
               style={{ 

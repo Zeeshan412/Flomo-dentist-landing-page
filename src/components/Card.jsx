@@ -1,6 +1,7 @@
 // src/components/Card.jsx
 import React from "react";
-import card from "../assets/card.svg";
+import Button from "./Button";
+import { card } from "../assets";
 
 
 const Card = ({ SvgIcon, title, description }) => {

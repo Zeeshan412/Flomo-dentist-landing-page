@@ -1,7 +1,6 @@
 import React from "react";
-import BabaYaga from "../assets/babayaga.svg";
+import { babayaga, tick } from "../assets";
 import FeatureCard from "./FeatureCard";
-import Tick from "../assets/tick.svg";
 
 const SolutionSection = () => {
   // Feature card data
@@ -32,7 +31,7 @@ const SolutionSection = () => {
           {/* Wrapper div with border radius */}
           <div className="rounded-2xl overflow-hidden w-full h-auto">
             <img 
-              src={BabaYaga} 
+              src={babayaga} 
               alt="Dental practice solution" 
               className="w-full h-auto object-contain sm:object-cover rounded-2xl"
               style={{ 
@@ -51,7 +50,7 @@ const SolutionSection = () => {
               <div className="flex items-center mb-4 sm:mb-6 relative">
                 <div className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] mr-2 sm:mr-3 md:mr-4 shrink-0">
                   <img 
-                    src={Tick} 
+                    src={tick} 
                     alt="Tick" 
                     className="w-full h-full"
                   />

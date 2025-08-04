@@ -1,23 +1,18 @@
 import React from "react";
-import Herolaptop from "../assets/Herolaptop.svg";
-import Star from "../assets/star.svg";
-import Shadow from "../assets/shadow.svg";
-import LaptopBg from "../assets/laptop bg.svg";
-import Logo from "../assets/Logo.svg";
+import { heroLaptop, star, shadow, laptopBg, logo } from "../assets";
 import Cbutton from "./Cbutton";
-import Star2 from "../assets/star.svg";
 
 const Hero = () => {
   return (
     <section className="max-w-[100%] min-h-[793px] pt-36 sm:pt-40 bg-gradient-to-br from-[#04215C] to-[#144AB7] relative overflow-hidden">
       {/* Star - made responsive with relative positioning */}
       <img
-        src={Star}
+        src={star}
         alt="Star"
         className="absolute w-[83px] h-[83px] top-[150px] right-[20%] md:right-[30%] lg:left-[816.9px] lg:right-auto hidden sm:block"
       />
       <img
-        src={Star2}
+        src={star}
         alt="Star 2"
         className="absolute w-[60px] h-[60px] top-[230px] left-[10.9px] opacity-50 hidden sm:block"
       />
@@ -43,7 +38,7 @@ const Hero = () => {
           <div className="relative">
             {/* Laptop Image */}
             <img
-              src={Herolaptop}
+              src={heroLaptop}
               alt="Hero Laptop"
               className="w-full h-full object-contain relative z-10"
             />
@@ -52,14 +47,14 @@ const Hero = () => {
             <div className="absolute top-[4.3%] left-[5.9%] w-[87.5%] h-[84.5%] z-20 flex items-center justify-center bg-white overflow-hidden rounded-lg">
               {/* White BG Image */}
               <img
-                src={LaptopBg}
+                src={laptopBg}
                 alt="Laptop Screen"
                 className="absolute inset-0 w-full h-full object-cover z-0"
               />
 
               {/* Centered Logo */}
               <img
-                src={Logo}
+                src={logo}
                 alt="Logo"
                 className="relative z-10 w-[80px] sm:w-[120px] md:w-[150px] lg:w-[200px] h-auto object-contain"
               />
@@ -67,7 +62,7 @@ const Hero = () => {
 
             {/* Shadow - positioned directly under laptop */}
             <img
-              src={Shadow}
+              src={shadow}
               alt="Laptop Shadow"
               className="absolute w-[100%] max-w-[620px] h-auto -bottom-10 left-1/2 transform -translate-x-1/2 z-[5]"
             />

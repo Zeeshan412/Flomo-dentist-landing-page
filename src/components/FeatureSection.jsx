@@ -1,13 +1,7 @@
 import React from "react";
+import FeatureCard from "./FeatureCard";
 import FigmaCard from "./FigmaCard";
-
-// Import SVG icons
-import pencilIcon from "../assets/pencil.svg";
-import searchIcon from "../assets/search.svg";
-import vectorIcon from "../assets/Vector.svg";
-import hiipaIcon from "../assets/hiipa.svg";
-import pageIcon from "../assets/page.svg";
-import groupIcon from "../assets/Group.svg";
+import { pencil, search, vector, hiipa, page, group } from "../assets";
 
 const FeatureSection = () => {
   return (
@@ -44,7 +38,7 @@ const FeatureSection = () => {
             <div className="w-full max-w-[280px] sm:max-w-[260px] md:max-w-[280px] lg:max-w-[320px]">
               <FigmaCard 
                 title="Step-by-Step SOP br Creator" 
-                icon={pageIcon}
+                icon={page}
               />
             </div>
           </div>
@@ -53,7 +47,7 @@ const FeatureSection = () => {
             <div className="w-full max-w-[280px] sm:max-w-[260px] md:max-w-[280px] lg:max-w-[320px]">
               <FigmaCard 
                 title="Smart Search Across All SOPS" 
-                icon={searchIcon}
+                icon={search}
               />
             </div>
           </div>
@@ -62,7 +56,7 @@ const FeatureSection = () => {
             <div className="w-full max-w-[280px] sm:max-w-[260px] md:max-w-[280px] lg:max-w-[320px]">
               <FigmaCard 
                 title="Global Search br And Replace" 
-                icon={pencilIcon}
+                icon={pencil}
               />
             </div>
           </div>
@@ -71,7 +65,7 @@ const FeatureSection = () => {
             <div className="w-full max-w-[280px] sm:max-w-[260px] md:max-w-[280px] lg:max-w-[320px]">
               <FigmaCard 
                 title="Role-Based br Onboarding" 
-                icon={groupIcon}
+                icon={group}
               />
             </div>
           </div>
@@ -80,7 +74,7 @@ const FeatureSection = () => {
             <div className="w-full max-w-[280px] sm:max-w-[260px] md:max-w-[280px] lg:max-w-[320px]">
               <FigmaCard 
                 title="Virtual Assistantship br Setup" 
-                icon={vectorIcon}
+                icon={vector}
               />
             </div>
           </div>
@@ -89,7 +83,7 @@ const FeatureSection = () => {
             <div className="w-full max-w-[280px] sm:max-w-[260px] md:max-w-[280px] lg:max-w-[320px]">
               <FigmaCard 
                 title="HIPAA-Compliant & br Secure" 
-                icon={hiipaIcon}
+                icon={hiipa}
               />
             </div>
           </div>

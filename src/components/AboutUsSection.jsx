@@ -1,10 +1,5 @@
 import React from "react";
-import doctorsImg from "../assets/doctors.svg";
-import doctor1Img from "../assets/doctor 1.svg";
-import doctor2Img from "../assets/doctor 2 svg.svg";
-import liineImg from "../assets/liine.svg";
-import Button from "./Button";
-import blueArrow from "../assets/blue arrow.svg";
+import { doctors, doctor1, doctor2, liine, blueArrow } from "../assets";
 
 const AboutUsSection = () => {
   return (
@@ -21,7 +16,7 @@ const AboutUsSection = () => {
             <div className="flex justify-center mb-8 relative">
               <div className="hidden md:block w-[866px] max-w-full mx-auto relative">
                 <img 
-                  src={liineImg} 
+                  src={liine} 
                   alt="Decorative line" 
                   className="w-full h-auto"
                   style={{
@@ -35,7 +30,7 @@ const AboutUsSection = () => {
               {/* Mobile version of line with shorter width */}
               <div className="md:hidden block w-[250px] max-w-[80%] mx-auto relative">
                 <img 
-                  src={liineImg} 
+                  src={liine} 
                   alt="Decorative line" 
                   className="w-full h-auto"
                   style={{
@@ -71,7 +66,7 @@ const AboutUsSection = () => {
             <div className="w-full md:w-1/2 flex items-start justify-center">
               <div className="rounded-2xl overflow-hidden w-full max-w-full sm:max-w-[450px] md:max-w-full" style={{ maxHeight: "calc(100%)" }}>
                 <img 
-                  src={doctorsImg} 
+                  src={doctors} 
                   alt="Dental professionals using Flomo" 
                   className="w-full h-auto object-contain md:object-cover rounded-lg"
                   style={{ maxHeight: "520px" }}
@@ -94,7 +89,7 @@ const AboutUsSection = () => {
             <div className="flex justify-center mb-8 relative">
               <div className="hidden md:block w-[866px] max-w-full mx-auto relative">
                 <img 
-                  src={liineImg} 
+                  src={liine} 
                   alt="Decorative line" 
                   className="w-full h-auto"
                   style={{
@@ -108,7 +103,7 @@ const AboutUsSection = () => {
               {/* Mobile version of line with shorter width */}
               <div className="md:hidden block w-[250px] max-w-[80%] mx-auto relative">
                 <img 
-                  src={liineImg} 
+                  src={liine} 
                   alt="Decorative line" 
                   className="w-full h-auto"
                   style={{
@@ -128,7 +123,7 @@ const AboutUsSection = () => {
             <div className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl rounded-b-xl">
               <div className="h-[200px] sm:h-[220px] md:h-[250px] lg:h-[300px] overflow-hidden">
                 <img 
-                  src={doctor2Img} 
+                  src={doctor2} 
                   alt="Doctor 2" 
                   className="w-full h-full object-cover"
                 />
@@ -143,7 +138,7 @@ const AboutUsSection = () => {
             <div className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl rounded-b-xl">
               <div className="h-[200px] sm:h-[220px] md:h-[250px] lg:h-[300px] overflow-hidden">
                 <img 
-                  src={doctor1Img} 
+                  src={doctor1} 
                   alt="Doctor 1" 
                   className="w-full h-full object-cover"
                 />

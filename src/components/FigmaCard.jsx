@@ -1,5 +1,5 @@
 import React from "react";
-import greyarrow from "../assets/greyarrow.svg";
+import { greyarrow } from "../assets";
 
 const FigmaCard = ({ title, description, icon, className, customStyle = {}, transparentBg = false, hideArrow = false }) => {
   // Split title at "br" and create an array of lines

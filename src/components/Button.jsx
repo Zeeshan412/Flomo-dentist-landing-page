@@ -1,5 +1,5 @@
 import React from "react";
-import arrow from "../assets/arrow.svg";
+import { arrow } from "../assets";
 
 const Button = ({ text = "Book A Demo" }) => {
   return (
